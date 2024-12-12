@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+<body>
+
+
+<h1 style="background-color:pink;" >General Culture Quiz</h1>
+
+
+<label for="question1" style="color:  rgb(76, 3, 119);">1. Hangi gezegen "Kızıl Gezegen" olarak bilinir?</label>
+<br>
+<select id="question1">
+  <option value="Venüs">Venüs</option>
+  <option value="Mars">Mars</option>  <! -- cevap-->
+  <option value="Jüpiter">Jüpiter</option>
+  <option value="Uranüs">Uranüs</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question2" style="color:  rgb(76, 3, 119);">2. Dünya'da en fazla konuşulan dil hangisidir?</label>
+<br>
+<select id="question2">
+  <option value="İspanyolca">İspanyolca</option>
+  <option value="İngilizce">İngilizce</option>
+  <option value="Mandarin Çincesi">Mandarin Çincesi</option><! -- cevap-->
+  <option value="Arapça">Arapça</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question3" style="color:  rgb(76, 3, 119);">3. 2020 Tokyo Olimpiyatları hangi yıl düzenlendi?</label>
+<br>
+<select id="question3">
+  <option value="2021">2021</option> <! -- cevap-->
+  <option value="2020">2020</option>
+  <option value="2016">2016</option>
+  <option value="2024">2024</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question4" style="color:  rgb(76, 3, 119);">4. “İstanbul’un Fethi” hangi tarihte gerçekleşmiştir?</label>
+<br>
+<select id="question4">
+  <option value="1453">1453</option><! -- cevap-->
+  <option value="1470">1470</option>
+  <option value="1326">1326</option>
+  <option value="1492">1492</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question5" style="color:  rgb(76, 3, 119);">5. Hangi Türk yazarı "İnce Memed" adlı eseriyle tanınır?</label>
+<br>
+<select id="question5">
+  <option value="Orhan Pamuk">Orhan Pamuk</option>
+  <option value="Yaşar Kemal">Yaşar Kemal</option><! -- cevap-->
+  <option value="Halit Refig">Halit Refig</option>
+  <option value="Sabahattin Ali">Sabahattin Ali</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question6" style="color:  rgb(76, 3, 119);">6. Avrupa Birliği’nin başkenti neresidir?</label>
+<br>
+<select id="question6">
+  <option value="Paris">Paris</option>
+  <option value="Brüksel">Brüksel</option><! -- cevap-->
+  <option value="Berlin">Berlin</option>
+  <option value="Roma">Roma</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question7" style="color:  rgb(76, 3, 119);">7. İlk Nobel Edebiyat Ödülü’nü kazanan yazar kimdir?</label>
+<br>
+<select id="question7">
+  <option value="Albert Einstein">Albert Einstein</option>
+  <option value="Ernest Hemingway">Ernest Hemingway</option>
+  <option value="Selma Lagerlöf">Selma Lagerlöf</option><! -- cevap-->
+  <option value="Gabriel García Márquez">Gabriel García Márquez</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question8" style="color:  rgb(76, 3, 119);">8. 16. yüzyılda Osmanlı İmparatorluğu'nda, en ünlü mimarlardan biri olan ve Süleymaniye Camii'ni inşa eden mimar kimdir?</label>
+<br>
+<select id="question8">
+  <option value="Mimar Sinan">Mimar Sinan</option><! -- cevap-->
+  <option value="Mimar Kemaleddin">Mimar Kemaleddin</option>
+  <option value="Baroque">Baroque</option>
+  <option value="Leon Battista Alberti">Leon Battista Alberti</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question9" style="color:  rgb(76, 3, 119);">9. Aşağıdaki ülkelerden hangisi Asya kıtasında yer almaz?</label>
+<br>
+<select id="question9">
+  <option value="Hindistan">Hindistan</option>
+  <option value="Japonya">Japonya</option>
+  <option value="Brezilya">Brezilya</option><! -- cevap-->
+  <option value="Çin">Çin</option>
+</select>
+
+
+<br><br>
+
+
+<label for="question10" style="color:  rgb(76, 3, 119);">10. Hangi ünlü Amerikalı bilim insanı, "Küresel Isınma" hakkında yaptığı çalışmalarıyla tanınmaktadır?</label>
+<br>
+<select id="question10">
+  <option value="Thomas Edison">Thomas Edison</option>
+  <option value="Nikola Tesla">Nikola Tesla</option>
+  <option value="Albert Einstein">Albert Einstein</option>
+  <option value="Al Gore">Al Gore</option><! -- cevap-->
+ 
+</select>
+<br><br>
+<button onclick="getFinalScore()">puanı göster</button>
+<p id="scoreResult"></p>
+
+
+  <script>
+   
+    function getFinalScore(){
+        var correctAnswers = {
+        question1: "Mars",
+        question2: "Mandarin Çincesi",
+        question3: "2021",
+        question4: "1453",
+        question5: "Yaşar Kemal",
+        question6: "Brüksel",
+        question7: "Selma Lagerlöf",
+        question8: "Mimar Sinan",
+        question9: "Brezilya",
+        question10: "Al Gore"
+    };
+
+
+    let score =0;
+    let userAnswers = {
+        question1: document.getElementById("question1").value,
+        question2: document.getElementById("question2").value,
+        question3: document.getElementById("question3").value,
+        question4: document.getElementById("question4").value,
+        question5: document.getElementById("question5").value,
+        question6: document.getElementById("question6").value,
+        question7: document.getElementById("question7").value,
+        question8: document.getElementById("question8").value,
+        question9: document.getElementById("question9").value,
+        question10: document.getElementById("question10").value
+    };
+
+
+   
+    for (var question in correctAnswers) {
+        if (userAnswers[question] === correctAnswers[question]) {
+            score += 10;
+        } else {
+            score -= 10;
+        }
+    }
+
+
+   
+    document.getElementById("scoreResult").innerText = "Puanınız: " + score;
+}
+
+
+  </script>
+ 
+ 
+
+
+</body>
+</html>
+
+
+
+
+
